@@ -9,10 +9,10 @@ class Artwork(models.Model):
     available = models.BooleanField("disponible", default=True)
     title = models.CharField('titre du disque ', max_length=200)
     photo = models.FileField("URL dl image", upload_to="photo/")
-    author = models.ManyToManyField(Author, related_name='arrtwork', blank=True)
+    authors = models.ManyToManyField(Author, related_name='arrtwork', blank=True)
 
-    def __str__(self):
-        return self.title
+    # def __str__(self):
+    #     return self.title
 
     class Meta:
         verbose_name = "artwork"
