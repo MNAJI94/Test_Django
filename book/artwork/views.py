@@ -20,4 +20,4 @@ def listing(request):
         'authors': authors,
         'paginate': True
     }
-    return render(request, 'store/listing.html', context)
+    return render(request, 'artwork/listing.html', context)
